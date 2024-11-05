@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JCB Bill</title>
+    <link rel="icon" href="jcb1.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body onload="initializeForm()">
+    <div class="bill-container">
+        <center>
+            <nav class="nav">
+                <a href="index.html">Bill</a> &nbsp; &nbsp;&nbsp; &nbsp;&nbsp; &nbsp;
+                <a href="operator.html">JCB Operator</a> 
+            </nav>
+        </center>
+         <hr /><br />
+        <header>
+            <div class="header-left">
+                <p>प्रो. संदिप रावसाहेब नांगरे</p>
+                <p>मो. 8668795808</p>
+            </div>
+            <h1>श्रीनाथ अर्थमूव्हर्स</h1>
+            <div class="header-right">
+                <p>ऑपरेटर सुनील पवार</p>
+                <p>मो. 9579933662</p>
+            </div>
+        </header>
+
+        <p class="subtitle">आमचेकडे जे.सी.बी. भाडे तत्वावर मिळेल.</p>
+        <p class="address">ठिकाण: बहिरवाडी, ता. नेवासा, जि. अ. नगर</p>
+
+        <div class="bill-details">
+            <div>क्र. <input type="text" class="underline" placeholder="701" /></div>
+            <div>श्री. <input type="text" class="underline" placeholder="नाव" required/></div>
+            <div>दि. <input type="date" id="date" class="underline" /></div>
+        </div>
+
+        <table>
+            <tr>
+                <th>अ.न.</th>
+                <th>तपशिल</th>
+                <th>तास</th>
+                <th>दर</th>
+                <th colspan="2">रक्कम</th>
+            </tr>
+            <tr>
+                <td><input type="text" value="1" readonly /></td>
+                <td><input type="text" placeholder="तपशिल" /></td>
+                <td><input type="number" id="hours" oninput="calculateTotal()" required/></td>
+                <td><input type="number" id="amount" value="1200" readonly /></td>
+                <td colspan="2"><input type="text" id="total" readonly /></td>
+            </tr>
+        </table>
+
+        <div class="footer">
+            <p>अक्षरी रु. <input type="text" id="amountInWords" class="underline" readonly /></p>
+            <br />
+            <p>ग्राहकाचा व्हॉट्सअप नंबर: <input type="text" id="customerNumber" placeholder="Enter WhatsApp Number" /></p>
+            <br /> <br />
+            <button onclick="shareBill()" class="btn">Share Bill</button><br /> 
+            <center><img src="jcb.jpg" height="250px"></center>
+            <p class="thanks">धन्यवाद !</p>
+            <p class="owner">नाथकृपा अर्थमूव्हर्स करिता</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
